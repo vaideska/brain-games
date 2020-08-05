@@ -21,6 +21,10 @@
 
 [![asciicast](https://asciinema.org/a/0iphhtOsTIo6HnMbEcRug0xSi.svg)](https://asciinema.org/a/0iphhtOsTIo6HnMbEcRug0xSi)
 
-Демонстрация игры прогрессия:
+Демонстрация игры "Прогрессия":
 
 [![asciicast](https://asciinema.org/a/j9LmLWkkphIbR5Qq9zSLqwsr6.svg)](https://asciinema.org/a/j9LmLWkkphIbR5Qq9zSLqwsr6)
+
+Демонстрация игры "Простое ли число?":
+
+[![asciicast](https://asciinema.org/a/XLb3as6rDEQJV19pYH5A0usxG.svg)](https://asciinema.org/a/XLb3as6rDEQJV19pYH5A0usxG)
