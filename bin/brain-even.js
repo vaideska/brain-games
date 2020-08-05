@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import playParityCheck from '../src/parity-check.js';
+import playGameIsEvenNum from '../src/games/game-is-even-num.js';
 
-playParityCheck();
+playGameIsEvenNum();
