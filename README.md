@@ -23,3 +23,4 @@
 
 Демонстрация игры прогрессия:
 
+[![asciicast](https://asciinema.org/a/j9LmLWkkphIbR5Qq9zSLqwsr6.svg)](https://asciinema.org/a/j9LmLWkkphIbR5Qq9zSLqwsr6)
