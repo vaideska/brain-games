@@ -26,7 +26,7 @@ const playGameProgression = () => {
     } else if (skipIndex === arrayProgr.length - 1) {
       answer = 2 * arrayProgr[skipIndex - 1] - arrayProgr[skipIndex - 2];
     } else {
-      const diff = (arrayProgr[skipIndex + 1] - arrayProgr[skipIndex - 1]) / 2
+      const diff = (arrayProgr[skipIndex + 1] - arrayProgr[skipIndex - 1]) / 2;
       answer = arrayProgr[skipIndex + 1] - diff;
     }
     return answer;
