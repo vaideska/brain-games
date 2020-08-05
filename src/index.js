@@ -45,8 +45,20 @@ const getGCD = (num1, num2) => {
   return gtc;
 };
 
+const isEvenNumber = (num) => num % 2 === 0;
+
+const isPrimeNumber = (num) => {
+  if (num <= 1) return false;
+  for (let i = 2; i < num / 2; i += 1) {
+    if (num % i === 0) return false;
+  }
+  return true;
+};
+
 export default readlineSync;
 
 export {
-  getRandomNumber, templateGame, countCorrectAnswer, getGCD, lengthProgression, maxDiffProgression,
+  getRandomNumber, templateGame,
+  getGCD, isPrimeNumber, isEvenNumber,
+  countCorrectAnswer, lengthProgression, maxDiffProgression,
 };
