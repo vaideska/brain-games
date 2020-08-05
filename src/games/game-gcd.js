@@ -5,7 +5,7 @@ import {
 const playGameGCD = () => {
   const textRules = 'Find the greatest common divisor of given numbers.';
 
-  const getQuestion = () => `${getRandomNumber()} ${getRandomNumber()}`;
+  const getQuestion = () => `${getRandomNumber() + 1} ${getRandomNumber() + 1}`;
 
   const getCorrectAnswer = (expression) => {
     const space = expression.indexOf(' ');

@@ -3,6 +3,8 @@ import greetUser from './sli.js';
 
 const maxNumRand = 100;
 const countCorrectAnswer = 3;
+const lengthProgression = 10;
+const maxDiffProgression = 10;
 
 const getRandomNumber = (num = maxNumRand) => Math.floor(Math.random() * num);
 
@@ -46,5 +48,5 @@ const getGCD = (num1, num2) => {
 export default readlineSync;
 
 export {
-  getRandomNumber, templateGame, countCorrectAnswer, getGCD,
+  getRandomNumber, templateGame, countCorrectAnswer, getGCD, lengthProgression, maxDiffProgression,
 };

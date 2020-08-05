@@ -20,3 +20,6 @@
 Демонстрация игры "НОД":
 
 [![asciicast](https://asciinema.org/a/0iphhtOsTIo6HnMbEcRug0xSi.svg)](https://asciinema.org/a/0iphhtOsTIo6HnMbEcRug0xSi)
+
+Демонстрация игры прогрессия:
+
