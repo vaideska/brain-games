@@ -9,3 +9,6 @@
 
 [![asciicast](https://asciinema.org/a/eVYdFe4P6LuVotva6M73Fkpl0.svg)](https://asciinema.org/a/eVYdFe4P6LuVotva6M73Fkpl0)
 
+Демонстрация игры "Калькулятор":
+
+[![asciicast](https://asciinema.org/a/zJ7Kv4s45MhQu1p6x8bLIvIFd.svg)](https://asciinema.org/a/zJ7Kv4s45MhQu1p6x8bLIvIFd)
