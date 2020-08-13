@@ -1,19 +1,18 @@
-import {
-  getRandomNumber, templateGame,
-} from '../index.js';
+import getRandomNumber from '../function.js';
+import playGame from '../index.js';
 
 const isEvenNumber = (num) => num % 2 === 0;
 
-const playGameEven = () => {
-  const textRules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const getGameDataEven = () => {
+  const textRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const getQuestionAndAnswer = () => {
-    const num = getRandomNumber();
-    const answer = isEvenNumber(num) ? 'yes' : 'no';
-    return [num, answer];
+    const question = getRandomNumber();
+    const answer = isEvenNumber(question) ? 'yes' : 'no';
+    return [question, answer];
   };
 
-  templateGame(textRules, getQuestionAndAnswer);
+  playGame(textRule, getQuestionAndAnswer);
 };
 
-export default playGameEven;
+export default getGameDataEven;

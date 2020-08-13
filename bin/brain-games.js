@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import greetUser from '../src/sli.js';
+import greetUser from '../src/greetUser.js';
 
 greetUser();

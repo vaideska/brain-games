@@ -1,10 +1,9 @@
-import {
-  getRandomNumber, templateGame,
-} from '../index.js';
+import getRandomNumber from '../function.js';
+import playGame from '../index.js';
 
-const playGameCalc = () => {
-  const textRules = 'What is the result of the expression?';
-  const operators = ['+', '-', '*'];
+const getGameDataCalc = () => {
+  const textRule = 'What is the result of the expression?';
+  const operations = ['+', '-', '*'];
 
   const getCorrectAnswer = (operand1, operand2, operation) => {
     let answer;
@@ -15,7 +14,7 @@ const playGameCalc = () => {
         break;
       case '*': answer = operand1 * operand2;
         break;
-      default: answer = NaN;
+      default: break;
     }
     return answer;
   };
@@ -23,13 +22,13 @@ const playGameCalc = () => {
   const getQuestionAndAnswer = () => {
     const operand1 = getRandomNumber();
     const operand2 = getRandomNumber();
-    const operation = operators[getRandomNumber(3)];
+    const operation = operations[getRandomNumber(0, operations.length)];
     const question = `${operand1} ${operation} ${operand2}`;
     const answer = getCorrectAnswer(operand1, operand2, operation);
-    return [question, answer];
+    return [question, String(answer)];
   };
 
-  templateGame(textRules, getQuestionAndAnswer);
+  playGame(textRule, getQuestionAndAnswer);
 };
 
-export default playGameCalc;
+export default getGameDataCalc;

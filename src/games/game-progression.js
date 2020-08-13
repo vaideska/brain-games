@@ -1,27 +1,27 @@
-import {
-  getRandomNumber, templateGame,
-} from '../index.js';
+import getRandomNumber from '../function.js';
+import playGame from '../index.js';
 
 const lengthProgression = 10;
 const maxDiffProgression = 10;
 
-const playGameProgression = () => {
-  const textRules = 'What number is missing in the progression?';
+const getGameDataProgression = () => {
+  const textRule = 'What number is missing in the progression?';
 
   const getQuestionAndAnswer = () => {
     const firstNum = getRandomNumber();
-    const diffProgression = getRandomNumber(maxDiffProgression) + 1;
-    const skip = getRandomNumber(lengthProgression);
+    const diffProgression = getRandomNumber(1, maxDiffProgression);
+    const skip = getRandomNumber(0, lengthProgression);
     const progression = [];
     for (let i = 0; i < lengthProgression; i += 1) {
       progression.push(firstNum + diffProgression * i);
     }
-    const skipElement = progression[skip];
+    const answer = progression[skip];
     progression[skip] = '..';
-    return [progression.join(' '), skipElement];
+    const question = progression.join(' ');
+    return [question, String(answer)];
   };
 
-  templateGame(textRules, getQuestionAndAnswer);
+  playGame(textRule, getQuestionAndAnswer);
 };
 
-export default playGameProgression;
+export default getGameDataProgression;

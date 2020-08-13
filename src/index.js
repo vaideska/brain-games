@@ -1,25 +1,10 @@
 import readlineSync from 'readline-sync';
-import greetUser from './sli.js';
+import greetUser from './greetUser.js';
 
-const maxNumRand = 100;
 const countCorrectAnswer = 3;
 
-const getRandomNumber = (num = maxNumRand) => Math.floor(Math.random() * num);
-
-const checkAnswer = (userName, userAnswer, correctAnswer, correctCount) => {
-  let resultCorrectCount = 0;
-  if (String(correctAnswer) === String(userAnswer)) {
-    console.log('Correct!');
-    resultCorrectCount = correctCount + 1;
-  } else {
-    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-    console.log(`Let's try again, ${userName}!`);
-  }
-  return resultCorrectCount;
-};
-
-const templateGame = (textRules, getQuestionAndAnswer) => {
-  const name = greetUser();
+const playGame = (textRules, getQuestionAndAnswer) => {
+  const userName = greetUser();
   console.log(textRules);
   let correctCount = 0;
 
@@ -28,13 +13,16 @@ const templateGame = (textRules, getQuestionAndAnswer) => {
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    correctCount = checkAnswer(name, userAnswer, correctAnswer, correctCount);
+    if (correctAnswer === userAnswer) {
+      console.log('Correct!');
+      correctCount += 1;
+    } else {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+      console.log(`Let's try again, ${userName}!`);
+      correctCount = 0;
+    }
   }
-  console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
-export default readlineSync;
-
-export {
-  getRandomNumber, templateGame,
-};
+export default playGame;

@@ -1,6 +1,5 @@
-import {
-  getRandomNumber, templateGame,
-} from '../index.js';
+import getRandomNumber from '../function.js';
+import playGame from '../index.js';
 
 const getGCD = (num1, num2) => {
   const minNum = num1 > num2 ? num2 : num1;
@@ -11,18 +10,18 @@ const getGCD = (num1, num2) => {
   return gtc;
 };
 
-const playGameGCD = () => {
-  const textRules = 'Find the greatest common divisor of given numbers.';
+const getGameDataGCD = () => {
+  const textRule = 'Find the greatest common divisor of given numbers.';
 
   const getQuestionAndAnswer = () => {
-    const num1 = getRandomNumber() + 1;
-    const num2 = getRandomNumber() + 1;
+    const num1 = getRandomNumber(1);
+    const num2 = getRandomNumber(1);
     const question = `${num1} ${num2}`;
-    const gcd = getGCD(num1, num2);
-    return [question, gcd];
+    const answer = getGCD(num1, num2);
+    return [question, String(answer)];
   };
 
-  templateGame(textRules, getQuestionAndAnswer);
+  playGame(textRule, getQuestionAndAnswer);
 };
 
-export default playGameGCD;
+export default getGameDataGCD;
