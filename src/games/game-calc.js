@@ -1,8 +1,8 @@
-import getRandomNumber from '../function.js';
+import getRandomNumber from '../getGameData.js';
 import playGame from '../index.js';
 
 const getGameDataCalc = () => {
-  const textRule = 'What is the result of the expression?';
+  const rule = 'What is the result of the expression?';
   const operations = ['+', '-', '*'];
 
   const getCorrectAnswer = (operand1, operand2, operation) => {
@@ -28,7 +28,7 @@ const getGameDataCalc = () => {
     return [question, String(answer)];
   };
 
-  playGame(textRule, getQuestionAndAnswer);
+  playGame(rule, getQuestionAndAnswer);
 };
 
 export default getGameDataCalc;

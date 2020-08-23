@@ -1,25 +1,31 @@
 import readlineSync from 'readline-sync';
-import greetUser from './greetUser.js';
 
-const countCorrectAnswer = 3;
+const minCorrectAnswersCount = 3;
 
-const playGame = (textRules, getQuestionAndAnswer) => {
+const greetUser = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  return name;
+};
+
+const playGame = (rule, getQuestionAndAnswer) => {
   const userName = greetUser();
-  console.log(textRules);
-  let correctCount = 0;
+  console.log(rule);
+  let correctAnswersCount = 0;
 
-  while (correctCount < countCorrectAnswer) {
+  while (correctAnswersCount < minCorrectAnswersCount) {
     const [question, correctAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (correctAnswer === userAnswer) {
       console.log('Correct!');
-      correctCount += 1;
+      correctAnswersCount += 1;
     } else {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
       console.log(`Let's try again, ${userName}!`);
-      correctCount = 0;
+      correctAnswersCount = 0;
     }
   }
   console.log(`Congratulations, ${userName}!`);

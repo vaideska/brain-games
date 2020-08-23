@@ -1,4 +1,4 @@
-import getRandomNumber from '../function.js';
+import getRandomNumber from '../getGameData.js';
 import playGame from '../index.js';
 
 const isPrimeNumber = (num) => {
@@ -10,7 +10,7 @@ const isPrimeNumber = (num) => {
 };
 
 const getGameDataPrime = () => {
-  const textRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const getQuestionAndAnswer = () => {
     const question = getRandomNumber();
@@ -18,7 +18,7 @@ const getGameDataPrime = () => {
     return [question, answer];
   };
 
-  playGame(textRule, getQuestionAndAnswer);
+  playGame(rule, getQuestionAndAnswer);
 };
 
 export default getGameDataPrime;

@@ -1,11 +1,11 @@
-import getRandomNumber from '../function.js';
+import getRandomNumber from '../getGameData.js';
 import playGame from '../index.js';
 
 const lengthProgression = 10;
 const maxDiffProgression = 10;
 
 const getGameDataProgression = () => {
-  const textRule = 'What number is missing in the progression?';
+  const rule = 'What number is missing in the progression?';
 
   const getQuestionAndAnswer = () => {
     const firstNum = getRandomNumber();
@@ -21,7 +21,7 @@ const getGameDataProgression = () => {
     return [question, String(answer)];
   };
 
-  playGame(textRule, getQuestionAndAnswer);
+  playGame(rule, getQuestionAndAnswer);
 };
 
 export default getGameDataProgression;

@@ -1,10 +1,10 @@
-import getRandomNumber from '../function.js';
+import getRandomNumber from '../getGameData.js';
 import playGame from '../index.js';
 
 const isEvenNumber = (num) => num % 2 === 0;
 
 const getGameDataEven = () => {
-  const textRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const getQuestionAndAnswer = () => {
     const question = getRandomNumber();
@@ -12,7 +12,7 @@ const getGameDataEven = () => {
     return [question, answer];
   };
 
-  playGame(textRule, getQuestionAndAnswer);
+  playGame(rule, getQuestionAndAnswer);
 };
 
 export default getGameDataEven;
