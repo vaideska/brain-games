@@ -24,15 +24,11 @@ const playGame = (rule, getQuestionAndAnswer) => {
       correctAnswersCount += 1;
     } else {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-      break;
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
   }
-
-  if (correctAnswersCount === minCorrectAnswersCount) {
-    console.log(`Congratulations, ${userName}!`);
-  } else {
-    console.log(`Let's try again, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default playGame;
