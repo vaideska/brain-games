@@ -1,8 +1,7 @@
 # frontend-project-lvl1
 Учебный проект по JS "Игры разума".
 
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-
+<a href="https://codeclimate.com/github/vaideska/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/d7abe28483f39b267bd8/maintainability" /></a>
 [![Node CI](https://github.com/vaideska/frontend-project-lvl1/workflows/Node%20CI/badge.svg?branch=master&kill_cache=1)](https://github.com/vaideska/frontend-project-lvl1/actions)
 
 ## Для установки пакета необходимо:
