@@ -1,20 +1,16 @@
 import readlineSync from 'readline-sync';
 
-const minCorrectAnswersCount = 3;
-
-export const greetUser = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  return name;
-};
+const roundsCount = 3;
 
 const playGame = (rule, getQuestionAndAnswer) => {
-  const userName = greetUser();
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+
   console.log(rule);
   let correctAnswersCount = 0;
 
-  while (correctAnswersCount < minCorrectAnswersCount) {
+  while (correctAnswersCount < roundsCount) {
     const [question, correctAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
